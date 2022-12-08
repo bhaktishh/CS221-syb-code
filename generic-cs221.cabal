@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.6.
+--
+-- see: https://github.com/sol/hpack
+
+name:           generic-cs221
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/bhaktishh/generic-cs221#readme>
+homepage:       https://github.com/bhaktishh/generic-cs221#readme
+bug-reports:    https://github.com/bhaktishh/generic-cs221/issues
+author:         Bhakti Shah
+maintainer:     shahbhakti21@gmail.com
+copyright:      Bhakti Shah
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/bhaktishh/generic-cs221
+
+library
+  exposed-modules:
+      Work
+  other-modules:
+      Paths_generic_cs221
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XDeriveDataTypeable -XRankNTypes
+  build-depends:
+      base >=4.7 && <5
+    , syb
+  default-language: Haskell2010
+
+executable generic-cs221-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_generic_cs221
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XDeriveDataTypeable -XRankNTypes -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , generic-cs221
+    , syb
+  default-language: Haskell2010
+
+test-suite generic-cs221-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_generic_cs221
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -XDeriveDataTypeable -XRankNTypes -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , generic-cs221
+    , syb
+  default-language: Haskell2010
